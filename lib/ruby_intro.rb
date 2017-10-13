@@ -35,6 +35,28 @@ end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  if arr.length == 0#Проверка на пустой масив
+    return false
+  end
+
+  if arr.length < 2#Длину на пустой масива
+    return false
+  end
+  i=0
+  while i<arr.length-1 do
+    j=i+1
+    a = arr[i]
+    while j<arr.length do
+       b=arr[j]
+       if  a+b == n
+         return true
+       end
+      j=j+1
+    end
+    i=i+1
+  end
+
+  return false
 end
 
 # Part 2
