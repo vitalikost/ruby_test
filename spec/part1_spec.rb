@@ -20,7 +20,6 @@ describe 'Ruby intro part 1' do
     end
   end
 
-
   describe "#max_2_sum" do
     it "should be defined" do
       expect { max_2_sum([1,2,3]) }.not_to raise_error
@@ -39,9 +38,6 @@ describe 'Ruby intro part 1' do
       expect(max_2_sum([3])).to eq(3)
     end
   end
-
-
-
 
   describe "#sum_to_n" do
     it "should be defined" do
