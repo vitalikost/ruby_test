@@ -39,7 +39,7 @@ def sum_to_n? arr, n
     return false
   end
 
-  if arr.length < 2#Длину на пустой масива
+  if arr.length < 2#Проверка на длинну масива
     return false
   end
   i=0
@@ -63,10 +63,15 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+    return  'Hello, '+name.chomp
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+# YOUR CODE HERE
+  if s[/(^[^ouaeiOUAEI])/]
+   return true
+  end
+  return false
 end
 
 def binary_multiple_of_4? s
