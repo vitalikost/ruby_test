@@ -76,6 +76,20 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  result = s[/(^[01]{1,})/]
+
+  if result == nil
+    return false
+  end
+
+  a = result.to_i(2)
+  b = a/4
+
+  if  b*4 == a
+    return true
+  end
+
+  return false
 end
 
 # Part 3
