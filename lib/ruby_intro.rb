@@ -68,7 +68,7 @@ end
 
 def starts_with_consonant? s
 # YOUR CODE HERE
-  if s[/(^[^ouaeiOUAEI])/]
+  if s[/(^[^ouaeiOUAEI\W])/]
    return true
   end
   return false
