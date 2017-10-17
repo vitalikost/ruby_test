@@ -95,5 +95,42 @@ end
 # Part 3
 
 class BookInStock
+  #Конструктор
+  def initialize(start_isbn,start_price)
+    if start_price<=0
+      raise ArgumentError.new(" Не верно указан цена")
+    end
+
+    if start_isbn.length == 0
+      raise ArgumentError.new(" Не верно указан isbn")
+    end
+
+    @isbn = start_isbn
+    @price = start_price
+
+
+  end
+  #-----------
+  #Гетеры
+  def price
+    @price
+  end
+
+  def isbn
+    @isbn
+  end
+  #-----------
+  #Сетеры
+  def price=(new_price)
+    @price=new_price
+  end
+
+  def isbn=(new_isbn)
+    @isbn=new_isbn
+  end
+  #-----------
+  def price_as_string
+    "$%.2f" % @price
+  end
 # YOUR CODE HERE
 end
